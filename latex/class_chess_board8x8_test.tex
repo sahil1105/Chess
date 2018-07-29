@@ -1,0 +1,110 @@
+\hypertarget{class_chess_board8x8_test}{}\section{Chess\+Board8x8\+Test Class Reference}
+\label{class_chess_board8x8_test}\index{Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}}
+Inheritance diagram for Chess\+Board8x8\+Test\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_chess_board8x8_test}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_chess_board8x8_test_afebde4bbc3c2605a554bb3e974108969}{set\+Up}} ()  throws Exception 
+\item 
+void \mbox{\hyperlink{class_chess_board8x8_test_a03828a60620e811e0ec03c473349b27e}{test\+Board\+Idx\+To\+Position}} ()
+\item 
+void \mbox{\hyperlink{class_chess_board8x8_test_aa806b2ef91d514dc4512a5d83d589793}{test\+Is\+Occupied}} ()
+\item 
+void \mbox{\hyperlink{class_chess_board8x8_test_a618b9e28857d806c997a95b460af6096}{test\+Is\+Occupied\+By\+Opponent}} ()
+\item 
+void \mbox{\hyperlink{class_chess_board8x8_test_ad95f3f9c7e4c41d5f18016bea3a4f9a4}{test\+Init\+Board}} ()
+\item 
+void \mbox{\hyperlink{class_chess_board8x8_test_a630e1345d39197c0771f835f52b95f78}{test\+Move}} ()
+\item 
+void \mbox{\hyperlink{class_chess_board8x8_test_a4404a29c2dda879be760b3eb06deb16e}{test\+Move\+Leaves\+King\+In\+Check}} ()
+\item 
+void \mbox{\hyperlink{class_chess_board8x8_test_a7f2da81ad7f3b8009164ddb09b5f0328}{test\+Find\+King}} ()
+\item 
+void \mbox{\hyperlink{class_chess_board8x8_test_a8732515f549e0ea68a0da19682eb9459}{test\+Is\+In\+Check}} ()
+\item 
+void \mbox{\hyperlink{class_chess_board8x8_test_aeb05e4785df2557766c7c651a4edd278}{test\+Is\+Game\+Over}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_chess_board8x8_test}{Chess\+Board8x8\+Test}} -- Tests for the \mbox{\hyperlink{class_chess_board8x8}{Chess\+Board8x8}} class. Tests most of the game logic such as index to position conversion, testing if a spot is occupied, if a spot is occupied by an opponent, testing the movement mechanism for the piece, checking if \textquotesingle{}checks\textquotesingle{} are detected, testing if checkmate and stalemate is detected, testing if the board is initialized correctly, etc. \begin{DoxyAuthor}{Author}
+sahil1105 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_chess_board8x8_test_afebde4bbc3c2605a554bb3e974108969}\label{class_chess_board8x8_test_afebde4bbc3c2605a554bb3e974108969}} 
+\index{Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}!set\+Up@{set\+Up}}
+\index{set\+Up@{set\+Up}!Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}}
+\subsubsection{\texorpdfstring{set\+Up()}{setUp()}}
+{\footnotesize\ttfamily void Chess\+Board8x8\+Test.\+set\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception}
+
+Initial setup for each of the tests. Initializes the game board and sets the turn to player1. 
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_chess_board8x8_test_a03828a60620e811e0ec03c473349b27e}\label{class_chess_board8x8_test_a03828a60620e811e0ec03c473349b27e}} 
+\index{Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}!test\+Board\+Idx\+To\+Position@{test\+Board\+Idx\+To\+Position}}
+\index{test\+Board\+Idx\+To\+Position@{test\+Board\+Idx\+To\+Position}!Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}}
+\subsubsection{\texorpdfstring{test\+Board\+Idx\+To\+Position()}{testBoardIdxToPosition()}}
+{\footnotesize\ttfamily void Chess\+Board8x8\+Test.\+test\+Board\+Idx\+To\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check if the function board\+Idx\+To\+Position is working correctly. \mbox{\Hypertarget{class_chess_board8x8_test_a7f2da81ad7f3b8009164ddb09b5f0328}\label{class_chess_board8x8_test_a7f2da81ad7f3b8009164ddb09b5f0328}} 
+\index{Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}!test\+Find\+King@{test\+Find\+King}}
+\index{test\+Find\+King@{test\+Find\+King}!Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}}
+\subsubsection{\texorpdfstring{test\+Find\+King()}{testFindKing()}}
+{\footnotesize\ttfamily void Chess\+Board8x8\+Test.\+test\+Find\+King (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks that the find\+King function works correctly, i.\+e. it is able to find the specified player\textquotesingle{}s king on the board. Does this by moving the king and the pieces around it, to ensure positions are correctly updated. Assumes \textquotesingle{}move\textquotesingle{} is functioning correctly. \mbox{\Hypertarget{class_chess_board8x8_test_ad95f3f9c7e4c41d5f18016bea3a4f9a4}\label{class_chess_board8x8_test_ad95f3f9c7e4c41d5f18016bea3a4f9a4}} 
+\index{Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}!test\+Init\+Board@{test\+Init\+Board}}
+\index{test\+Init\+Board@{test\+Init\+Board}!Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}}
+\subsubsection{\texorpdfstring{test\+Init\+Board()}{testInitBoard()}}
+{\footnotesize\ttfamily void Chess\+Board8x8\+Test.\+test\+Init\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Test the init\+Board function to ensure that the game\+Board is properly initiated. \mbox{\Hypertarget{class_chess_board8x8_test_aeb05e4785df2557766c7c651a4edd278}\label{class_chess_board8x8_test_aeb05e4785df2557766c7c651a4edd278}} 
+\index{Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}!test\+Is\+Game\+Over@{test\+Is\+Game\+Over}}
+\index{test\+Is\+Game\+Over@{test\+Is\+Game\+Over}!Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}}
+\subsubsection{\texorpdfstring{test\+Is\+Game\+Over()}{testIsGameOver()}}
+{\footnotesize\ttfamily void Chess\+Board8x8\+Test.\+test\+Is\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that the game can recognize checkmate and stalemate situations. It does this by creating a few situations of both and checking that the board can correctly recognize these situations. Also makes sure there are no false positives, such as positions where there is only a king left but the game is not actually over. This is mainly to guard against code that labels an isolated king as a defeat. Assumes \textquotesingle{}move\textquotesingle{} and \textquotesingle{}is\+In\+Check\textquotesingle{} are working correctly. \mbox{\Hypertarget{class_chess_board8x8_test_a8732515f549e0ea68a0da19682eb9459}\label{class_chess_board8x8_test_a8732515f549e0ea68a0da19682eb9459}} 
+\index{Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}!test\+Is\+In\+Check@{test\+Is\+In\+Check}}
+\index{test\+Is\+In\+Check@{test\+Is\+In\+Check}!Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}}
+\subsubsection{\texorpdfstring{test\+Is\+In\+Check()}{testIsInCheck()}}
+{\footnotesize\ttfamily void Chess\+Board8x8\+Test.\+test\+Is\+In\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that check detection is working by putting the kings of both players in various situation where they are and some aren\textquotesingle{}t in check and testing that the function correctly recognizes these situations. Assumes \textquotesingle{}move\textquotesingle{} is working. \mbox{\Hypertarget{class_chess_board8x8_test_aa806b2ef91d514dc4512a5d83d589793}\label{class_chess_board8x8_test_aa806b2ef91d514dc4512a5d83d589793}} 
+\index{Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}!test\+Is\+Occupied@{test\+Is\+Occupied}}
+\index{test\+Is\+Occupied@{test\+Is\+Occupied}!Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}}
+\subsubsection{\texorpdfstring{test\+Is\+Occupied()}{testIsOccupied()}}
+{\footnotesize\ttfamily void Chess\+Board8x8\+Test.\+test\+Is\+Occupied (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check if the is\+Occupied function is working correctly through exhaustive testing after board initialization. \mbox{\Hypertarget{class_chess_board8x8_test_a618b9e28857d806c997a95b460af6096}\label{class_chess_board8x8_test_a618b9e28857d806c997a95b460af6096}} 
+\index{Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}!test\+Is\+Occupied\+By\+Opponent@{test\+Is\+Occupied\+By\+Opponent}}
+\index{test\+Is\+Occupied\+By\+Opponent@{test\+Is\+Occupied\+By\+Opponent}!Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}}
+\subsubsection{\texorpdfstring{test\+Is\+Occupied\+By\+Opponent()}{testIsOccupiedByOpponent()}}
+{\footnotesize\ttfamily void Chess\+Board8x8\+Test.\+test\+Is\+Occupied\+By\+Opponent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check if the is\+Occupied\+By\+Opponent function works correctly through exhaustive testing. \mbox{\Hypertarget{class_chess_board8x8_test_a630e1345d39197c0771f835f52b95f78}\label{class_chess_board8x8_test_a630e1345d39197c0771f835f52b95f78}} 
+\index{Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}!test\+Move@{test\+Move}}
+\index{test\+Move@{test\+Move}!Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}}
+\subsubsection{\texorpdfstring{test\+Move()}{testMove()}}
+{\footnotesize\ttfamily void Chess\+Board8x8\+Test.\+test\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check the movement functionality of the board. Includes testing what happens when a player tries to move a piece to an empty slot, to an invalid space, tries to capture an opponent\textquotesingle{}s piece, try to control an opponent\textquotesingle{}s piece, tries to capture one of his/her own pieces, tries to put the king in check, etc. \mbox{\Hypertarget{class_chess_board8x8_test_a4404a29c2dda879be760b3eb06deb16e}\label{class_chess_board8x8_test_a4404a29c2dda879be760b3eb06deb16e}} 
+\index{Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}!test\+Move\+Leaves\+King\+In\+Check@{test\+Move\+Leaves\+King\+In\+Check}}
+\index{test\+Move\+Leaves\+King\+In\+Check@{test\+Move\+Leaves\+King\+In\+Check}!Chess\+Board8x8\+Test@{Chess\+Board8x8\+Test}}
+\subsubsection{\texorpdfstring{test\+Move\+Leaves\+King\+In\+Check()}{testMoveLeavesKingInCheck()}}
+{\footnotesize\ttfamily void Chess\+Board8x8\+Test.\+test\+Move\+Leaves\+King\+In\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks the functionality of the move\+Leaves\+King\+In\+Check function. Tested using several situations the board can be in and testing whether the function can check if a move would leave its king in check and preventing it. Also makes sure there are no false positives through exhaustive testing. Assumes \textquotesingle{}move\textquotesingle{} is functioning correctly. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/Chess\+Board8x8\+Test.\+java\end{DoxyCompactItemize}

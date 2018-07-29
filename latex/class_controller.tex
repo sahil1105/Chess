@@ -1,0 +1,175 @@
+\hypertarget{class_controller}{}\section{Controller Class Reference}
+\label{class_controller}\index{Controller@{Controller}}
+Inheritance diagram for Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_controller}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries G\+A\+M\+E\+\_\+\+T\+Y\+PE}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_chess_board8x8}{Chess\+Board8x8}} \mbox{\hyperlink{class_controller_a15e2c59414bfb52f5ba9b673fb4b93c2}{get\+Game\+Board}} ()
+\item 
+boolean \mbox{\hyperlink{class_controller_a205f52396194c605eeee2db013d4cc1b}{is\+Player1\+Turn}} ()
+\item 
+int \mbox{\hyperlink{class_controller_a27007d92148bf1197f4a3f0c11664505}{get\+Game\+State}} ()
+\item 
+int \mbox{\hyperlink{class_controller_a2805b206f72e1c9c783c8077231180b1}{get\+Player1\+Score}} ()
+\item 
+void \mbox{\hyperlink{class_controller_a4c83cbb9d5736813988acb340ccd709f}{set\+Player1\+Score}} (int player1\+Score)
+\item 
+int \mbox{\hyperlink{class_controller_af537df2be96eb58fbd5c6866e7b0e32f}{get\+Player2\+Score}} ()
+\item 
+void \mbox{\hyperlink{class_controller_a3b3ac4a3190e42a00a11996b88a89989}{set\+Player2\+Score}} (int player2\+Score)
+\item 
+G\+A\+M\+E\+\_\+\+T\+Y\+PE \mbox{\hyperlink{class_controller_a47ff273223f53707d8c5a8f151b7f03b}{get\+Current\+Game\+Type}} ()
+\item 
+void \mbox{\hyperlink{class_controller_aa308ff964753afb8fb1f8b9c753dc214}{set\+Current\+Game\+Type}} (G\+A\+M\+E\+\_\+\+T\+Y\+PE current\+Game\+Type)
+\item 
+\mbox{\hyperlink{class_controller_a5f680484b02e9b5009af214730425710}{Controller}} (\mbox{\hyperlink{class_chess_board8x8}{Chess\+Board8x8}} game\+Board)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_controller_a173fe03517370b8cbd226184a1a4554a}{main}} (String\mbox{[}$\,$\mbox{]} args)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_controller}{Controller}} \mbox{\hyperlink{class_controller_ac9eee5848fbbb6719d5cc24475fc03ae}{controller}} = this
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_controller_a5f680484b02e9b5009af214730425710}\label{class_controller_a5f680484b02e9b5009af214730425710}} 
+\index{Controller@{Controller}!Controller@{Controller}}
+\index{Controller@{Controller}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{Controller()}{Controller()}}
+{\footnotesize\ttfamily Controller.\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chess_board8x8}{Chess\+Board8x8}}}]{game\+Board }\end{DoxyParamCaption})}
+
+Constructor for the \mbox{\hyperlink{class_controller}{Controller}}. Makes all the necessary assignments and sets up callbacks on the G\+UI components. 
+\begin{DoxyParams}{Parameters}
+{\em game\+Board} & \mbox{\hyperlink{class_chess_board8x8}{Chess\+Board8x8}} object that serves as the model. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_controller_a47ff273223f53707d8c5a8f151b7f03b}\label{class_controller_a47ff273223f53707d8c5a8f151b7f03b}} 
+\index{Controller@{Controller}!get\+Current\+Game\+Type@{get\+Current\+Game\+Type}}
+\index{get\+Current\+Game\+Type@{get\+Current\+Game\+Type}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Current\+Game\+Type()}{getCurrentGameType()}}
+{\footnotesize\ttfamily G\+A\+M\+E\+\_\+\+T\+Y\+PE Controller.\+get\+Current\+Game\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getter for current game type \begin{DoxyReturn}{Returns}
+G\+A\+M\+E\+\_\+\+T\+Y\+P\+E.\+S\+T\+A\+N\+D\+A\+RD or G\+A\+M\+E\+\_\+\+T\+Y\+P\+E.\+C\+U\+S\+T\+OM based on whether playing according to standard configuration or the custom one. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_controller_a15e2c59414bfb52f5ba9b673fb4b93c2}\label{class_controller_a15e2c59414bfb52f5ba9b673fb4b93c2}} 
+\index{Controller@{Controller}!get\+Game\+Board@{get\+Game\+Board}}
+\index{get\+Game\+Board@{get\+Game\+Board}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Game\+Board()}{getGameBoard()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_chess_board8x8}{Chess\+Board8x8}} Controller.\+get\+Game\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getter for the \mbox{\hyperlink{class_chess_board8x8}{Chess\+Board8x8}} model \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_chess_board8x8}{Chess\+Board8x8}} object that is the model of the game. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_controller_a27007d92148bf1197f4a3f0c11664505}\label{class_controller_a27007d92148bf1197f4a3f0c11664505}} 
+\index{Controller@{Controller}!get\+Game\+State@{get\+Game\+State}}
+\index{get\+Game\+State@{get\+Game\+State}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Game\+State()}{getGameState()}}
+{\footnotesize\ttfamily int Controller.\+get\+Game\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getter for the current game state. \begin{DoxyReturn}{Returns}
+0 if game is ongoing 1 if it\textquotesingle{}s a checkmate -\/1 if it\textquotesingle{}s a stalemate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_controller_a2805b206f72e1c9c783c8077231180b1}\label{class_controller_a2805b206f72e1c9c783c8077231180b1}} 
+\index{Controller@{Controller}!get\+Player1\+Score@{get\+Player1\+Score}}
+\index{get\+Player1\+Score@{get\+Player1\+Score}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Player1\+Score()}{getPlayer1Score()}}
+{\footnotesize\ttfamily int Controller.\+get\+Player1\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getter for player1\+Score \begin{DoxyReturn}{Returns}
+player 1\textquotesingle{}s current score 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_controller_af537df2be96eb58fbd5c6866e7b0e32f}\label{class_controller_af537df2be96eb58fbd5c6866e7b0e32f}} 
+\index{Controller@{Controller}!get\+Player2\+Score@{get\+Player2\+Score}}
+\index{get\+Player2\+Score@{get\+Player2\+Score}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Player2\+Score()}{getPlayer2Score()}}
+{\footnotesize\ttfamily int Controller.\+get\+Player2\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getter for player2\+Score \begin{DoxyReturn}{Returns}
+player 2\textquotesingle{}s current score 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_controller_a205f52396194c605eeee2db013d4cc1b}\label{class_controller_a205f52396194c605eeee2db013d4cc1b}} 
+\index{Controller@{Controller}!is\+Player1\+Turn@{is\+Player1\+Turn}}
+\index{is\+Player1\+Turn@{is\+Player1\+Turn}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{is\+Player1\+Turn()}{isPlayer1Turn()}}
+{\footnotesize\ttfamily boolean Controller.\+is\+Player1\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getter for is\+Player1\+Turn boolean. \begin{DoxyReturn}{Returns}
+Boolean signifying whether it is player1\textquotesingle{}s turn or not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_controller_a173fe03517370b8cbd226184a1a4554a}\label{class_controller_a173fe03517370b8cbd226184a1a4554a}} 
+\index{Controller@{Controller}!main@{main}}
+\index{main@{main}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily static void Controller.\+main (\begin{DoxyParamCaption}\item[{String \mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Runner for the Chess Game. 
+\begin{DoxyParams}{Parameters}
+{\em args} & Command line arguments \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_controller_aa308ff964753afb8fb1f8b9c753dc214}\label{class_controller_aa308ff964753afb8fb1f8b9c753dc214}} 
+\index{Controller@{Controller}!set\+Current\+Game\+Type@{set\+Current\+Game\+Type}}
+\index{set\+Current\+Game\+Type@{set\+Current\+Game\+Type}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{set\+Current\+Game\+Type()}{setCurrentGameType()}}
+{\footnotesize\ttfamily void Controller.\+set\+Current\+Game\+Type (\begin{DoxyParamCaption}\item[{G\+A\+M\+E\+\_\+\+T\+Y\+PE}]{current\+Game\+Type }\end{DoxyParamCaption})}
+
+Setter for the current game type. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Game\+Type} & G\+A\+M\+E\+\_\+\+T\+Y\+PE enum type to set the current game type to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_controller_a4c83cbb9d5736813988acb340ccd709f}\label{class_controller_a4c83cbb9d5736813988acb340ccd709f}} 
+\index{Controller@{Controller}!set\+Player1\+Score@{set\+Player1\+Score}}
+\index{set\+Player1\+Score@{set\+Player1\+Score}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{set\+Player1\+Score()}{setPlayer1Score()}}
+{\footnotesize\ttfamily void Controller.\+set\+Player1\+Score (\begin{DoxyParamCaption}\item[{int}]{player1\+Score }\end{DoxyParamCaption})}
+
+Setter for player 1\textquotesingle{}s score. 
+\begin{DoxyParams}{Parameters}
+{\em player1\+Score} & score to set the player 1\textquotesingle{}s score to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_controller_a3b3ac4a3190e42a00a11996b88a89989}\label{class_controller_a3b3ac4a3190e42a00a11996b88a89989}} 
+\index{Controller@{Controller}!set\+Player2\+Score@{set\+Player2\+Score}}
+\index{set\+Player2\+Score@{set\+Player2\+Score}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{set\+Player2\+Score()}{setPlayer2Score()}}
+{\footnotesize\ttfamily void Controller.\+set\+Player2\+Score (\begin{DoxyParamCaption}\item[{int}]{player2\+Score }\end{DoxyParamCaption})}
+
+Setter for player 2\textquotesingle{}s score. 
+\begin{DoxyParams}{Parameters}
+{\em player2\+Score} & score to set the player 2\textquotesingle{}s score to. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_controller_ac9eee5848fbbb6719d5cc24475fc03ae}\label{class_controller_ac9eee5848fbbb6719d5cc24475fc03ae}} 
+\index{Controller@{Controller}!controller@{controller}}
+\index{controller@{controller}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{controller}{controller}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_controller}{Controller}} Controller.\+controller = this}
+
+A reference to this \mbox{\hyperlink{class_controller}{Controller}} object, useful when referring to this controller inside of Action\+Listeners. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/Controller.\+java\end{DoxyCompactItemize}

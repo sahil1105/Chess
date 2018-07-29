@@ -1,0 +1,179 @@
+\hypertarget{class_board}{}\section{Board Class Reference}
+\label{class_board}\index{Board@{Board}}
+Inheritance diagram for Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_board}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_chess_piece}{Chess\+Piece}} \mbox{\hyperlink{class_board_a2d576d78510ea4ebc9ec4036d782cd59}{get\+Piece\+At\+Position}} (int\mbox{[}$\,$\mbox{]} position)
+\item 
+short \mbox{\hyperlink{class_board_a74571b89bb29e12e8db706c6a8c7705b}{is\+Occupied}} (int\mbox{[}$\,$\mbox{]} position)
+\item 
+short \mbox{\hyperlink{class_board_a279849fba32fb36350e9dc06cdccb3f5}{is\+Occupied\+By\+Opponent}} (int\mbox{[}$\,$\mbox{]} position, boolean player1)
+\item 
+void \mbox{\hyperlink{class_board_afe083a69852c9d95ef3f212d5767b1ac}{init\+Board}} ()
+\item 
+boolean \mbox{\hyperlink{class_board_a0b51fa3d721412f18d84f10aa4c4f427}{move}} (int\mbox{[}$\,$\mbox{]} source\+\_\+pos, int\mbox{[}$\,$\mbox{]} dest\+\_\+pos, boolean player1)
+\item 
+boolean \mbox{\hyperlink{class_board_ae569166b69247afb243102a1b44f629c}{is\+In\+Check}} (boolean player1)
+\item 
+int \mbox{\hyperlink{class_board_a8e6efbc4d3b024ca11d5037962c01283}{is\+Game\+Over}} (boolean player1)
+\item 
+String \mbox{\hyperlink{class_board_aa0eb1bce909ddaa777b95bdaa003f727}{to\+String}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_a55a61aea44ab1a05806e5195ad5645b5}{board\+Idx\+To\+Position}} (int pos)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_chess_piece}{Chess\+Piece}} \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_a50512629d3c28bc8e1bd6278e1955d91}{board}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_board}{Board}} -- Abstract class to represent a Game \mbox{\hyperlink{class_board}{Board}} on which Chess\+Pieces would be placed. Most of the core functionality of the game must be implemented here, such as checking if a move is valid, if the game is over (checkmate or stalemate), if there are legal moves left, etc. \begin{DoxyAuthor}{Author}
+sahil1105 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_board_a55a61aea44ab1a05806e5195ad5645b5}\label{class_board_a55a61aea44ab1a05806e5195ad5645b5}} 
+\index{Board@{Board}!board\+Idx\+To\+Position@{board\+Idx\+To\+Position}}
+\index{board\+Idx\+To\+Position@{board\+Idx\+To\+Position}!Board@{Board}}
+\subsubsection{\texorpdfstring{board\+Idx\+To\+Position()}{boardIdxToPosition()}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]} Board.\+board\+Idx\+To\+Position (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Utility function that converts an array index to a \mbox{\hyperlink{class_chess_piece}{Chess\+Piece}} location in n-\/dimensional space. Needs to be implemented by children classes based on their dimensionality and board structure. 
+\begin{DoxyParams}{Parameters}
+{\em pos} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An int\mbox{[}\mbox{]} describing the location corresponding to the given index in n-\/dimensional space 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a2d576d78510ea4ebc9ec4036d782cd59}\label{class_board_a2d576d78510ea4ebc9ec4036d782cd59}} 
+\index{Board@{Board}!get\+Piece\+At\+Position@{get\+Piece\+At\+Position}}
+\index{get\+Piece\+At\+Position@{get\+Piece\+At\+Position}!Board@{Board}}
+\subsubsection{\texorpdfstring{get\+Piece\+At\+Position()}{getPieceAtPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_chess_piece}{Chess\+Piece}} Board.\+get\+Piece\+At\+Position (\begin{DoxyParamCaption}\item[{int \mbox{[}$\,$\mbox{]}}]{position }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the \mbox{\hyperlink{class_chess_piece}{Chess\+Piece}} object at the specified position or \textquotesingle{}null\textquotesingle{} if the position is empty. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_afe083a69852c9d95ef3f212d5767b1ac}\label{class_board_afe083a69852c9d95ef3f212d5767b1ac}} 
+\index{Board@{Board}!init\+Board@{init\+Board}}
+\index{init\+Board@{init\+Board}!Board@{Board}}
+\subsubsection{\texorpdfstring{init\+Board()}{initBoard()}}
+{\footnotesize\ttfamily void Board.\+init\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initializes the board with the correct pieces with respect to the game. \mbox{\Hypertarget{class_board_a8e6efbc4d3b024ca11d5037962c01283}\label{class_board_a8e6efbc4d3b024ca11d5037962c01283}} 
+\index{Board@{Board}!is\+Game\+Over@{is\+Game\+Over}}
+\index{is\+Game\+Over@{is\+Game\+Over}!Board@{Board}}
+\subsubsection{\texorpdfstring{is\+Game\+Over()}{isGameOver()}}
+{\footnotesize\ttfamily int Board.\+is\+Game\+Over (\begin{DoxyParamCaption}\item[{boolean}]{player1 }\end{DoxyParamCaption})}
+
+Function to check if the game is over (checkmate, stalemate, etc.) based on the rules of the game. 
+\begin{DoxyParams}{Parameters}
+{\em player1} & boolean specifying if it is player 1\textquotesingle{}s turn \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if there is a checkmate and hence the game is over -\/1 if there is a stalemate and hence the game is over 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_ae569166b69247afb243102a1b44f629c}\label{class_board_ae569166b69247afb243102a1b44f629c}} 
+\index{Board@{Board}!is\+In\+Check@{is\+In\+Check}}
+\index{is\+In\+Check@{is\+In\+Check}!Board@{Board}}
+\subsubsection{\texorpdfstring{is\+In\+Check()}{isInCheck()}}
+{\footnotesize\ttfamily boolean Board.\+is\+In\+Check (\begin{DoxyParamCaption}\item[{boolean}]{player1 }\end{DoxyParamCaption})}
+
+Function to check if the player whose turn it is, is in \textquotesingle{}Check\textquotesingle{} 
+\begin{DoxyParams}{Parameters}
+{\em player1} & boolean specifying which player\textquotesingle{}s turn it is \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the player is in check, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a74571b89bb29e12e8db706c6a8c7705b}\label{class_board_a74571b89bb29e12e8db706c6a8c7705b}} 
+\index{Board@{Board}!is\+Occupied@{is\+Occupied}}
+\index{is\+Occupied@{is\+Occupied}!Board@{Board}}
+\subsubsection{\texorpdfstring{is\+Occupied()}{isOccupied()}}
+{\footnotesize\ttfamily short Board.\+is\+Occupied (\begin{DoxyParamCaption}\item[{int \mbox{[}$\,$\mbox{]}}]{position }\end{DoxyParamCaption})}
+
+Checks if the position is occupied by a piece. 
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if not occupied 1 if occupied -\/1 if not a valid position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a279849fba32fb36350e9dc06cdccb3f5}\label{class_board_a279849fba32fb36350e9dc06cdccb3f5}} 
+\index{Board@{Board}!is\+Occupied\+By\+Opponent@{is\+Occupied\+By\+Opponent}}
+\index{is\+Occupied\+By\+Opponent@{is\+Occupied\+By\+Opponent}!Board@{Board}}
+\subsubsection{\texorpdfstring{is\+Occupied\+By\+Opponent()}{isOccupiedByOpponent()}}
+{\footnotesize\ttfamily short Board.\+is\+Occupied\+By\+Opponent (\begin{DoxyParamCaption}\item[{int \mbox{[}$\,$\mbox{]}}]{position,  }\item[{boolean}]{player1 }\end{DoxyParamCaption})}
+
+Checks if the position is occupied by an opponent or not. 
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+{\em player1} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if not occupied by opponent 1 if occupied by opponent -\/1 if not a valid position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a0b51fa3d721412f18d84f10aa4c4f427}\label{class_board_a0b51fa3d721412f18d84f10aa4c4f427}} 
+\index{Board@{Board}!move@{move}}
+\index{move@{move}!Board@{Board}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily boolean Board.\+move (\begin{DoxyParamCaption}\item[{int \mbox{[}$\,$\mbox{]}}]{source\+\_\+pos,  }\item[{int \mbox{[}$\,$\mbox{]}}]{dest\+\_\+pos,  }\item[{boolean}]{player1 }\end{DoxyParamCaption})}
+
+Function that moves a piece at source\+\_\+pos to dest\+\_\+pos if the move is legal. May capture opponent\textquotesingle{}s piece. 
+\begin{DoxyParams}{Parameters}
+{\em source\+\_\+pos} & Current Position of the piece to move \\
+\hline
+{\em dest\+\_\+pos} & Position to move the piece to. \\
+\hline
+{\em player1} & boolean specifying if this is player 1\textquotesingle{}s move or not. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+makes the move and returns true if the move is valid/legal else doesn\textquotesingle{}t make the move and returns false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_aa0eb1bce909ddaa777b95bdaa003f727}\label{class_board_aa0eb1bce909ddaa777b95bdaa003f727}} 
+\index{Board@{Board}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Board@{Board}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily String Board.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Overriding the to\+String function to aid in printing the board. \begin{DoxyReturn}{Returns}
+String representation of the \mbox{\hyperlink{class_board}{Board}}. Expected to be implemented by each child class based on its structure. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_board_a50512629d3c28bc8e1bd6278e1955d91}\label{class_board_a50512629d3c28bc8e1bd6278e1955d91}} 
+\index{Board@{Board}!board@{board}}
+\index{board@{board}!Board@{Board}}
+\subsubsection{\texorpdfstring{board}{board}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_chess_piece}{Chess\+Piece}} \mbox{[}$\,$\mbox{]} Board.\+board\hspace{0.3cm}{\ttfamily [protected]}}
+
+An array of \mbox{\hyperlink{class_chess_piece}{Chess\+Piece}} objects. Represents the actual game board. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/Board.\+java\end{DoxyCompactItemize}
